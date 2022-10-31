@@ -1,0 +1,70 @@
+//Encapsulation--
+
+Bank management programme-
+import java.util.Scanner;
+
+class Bank
+{
+   double bal=5000;
+    int pwd;
+    public void Deposite(double money) {
+        System.out.println("Enter Password-");
+        Scanner s =new Scanner(System.in);
+        pwd = s.nextInt();
+        if(pwd==1234){
+            bal=bal+ money;
+            System.out.println("deposited money"+ money);
+            System.out.println("total:"+ bal);
+        }else{
+            System.out.println("invalid password");
+        }
+    }
+    public void Withdrawn(double money) {
+        System.out.println("Enter Password-");
+        Scanner s =new Scanner(System.in);
+        pwd = s.nextInt();
+        if(pwd==1234){
+            bal= bal- money;
+            System.out.println("withdarwn money"+ money);
+            System.out.println("total:"+ bal);
+        }else{
+            System.out.println("invalid password");
+        }
+    }
+    public void checkBal() {
+        System.out.println("Enter Password-");
+        Scanner s =new Scanner(System.in);
+        pwd = s.nextInt();
+        if(pwd==1234){
+            System.out.println("total:"+ bal);
+        }else{
+            System.out.println("invalid password");
+        }
+    }
+}
+class Bank_system {
+    public static void main(String[] args) {
+        Bank b = new Bank();
+        int ch;
+        System.out.println("1. Deposite");
+        System.out.println("2. Withdraw");
+        System.out.println("3. Check Balance");
+
+        System.out.print("\n Enter Your Choice:");
+        Scanner s3 = new Scanner(System.in);
+        ch = s3.nextInt();
+        switch (ch) {
+            case 1:
+                b.Deposite(1000);
+                break;
+            case 2:
+                b.Withdrawn(20000);
+                break;
+            case 3:
+                b.checkBal();
+                break;
+            default:
+                System.out.print("\n Invalid Choice.");
+        }
+    }
+}
