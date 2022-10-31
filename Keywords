@@ -1,0 +1,143 @@
+
+
+
+ // Super Keyword- 
+ 
+ class D{
+       int a=10;
+}
+class E extends D {
+        int a =20;
+         void show(){
+            System.out.println(a);
+    }
+}
+public class SuperKey_word {
+    public static void main(String[] args){
+        E r= new E();
+        r.show();
+            }
+}
+
+
+//Parameterized constructor
+
+class A{
+    int x,y;
+    A(int a, int b){
+       x=a;y=b;
+        System.out.println(x+" "+ y);
+    }
+    void show(){
+        System.out.print(x+" "+ y);
+    }
+}
+public class Parameterized_Constructor {
+    public static void main(String[] args){
+        A r= new A(20,30);
+        r.show();
+    }
+
+}
+
+//private constructor
+
+class C{
+    int a; double b; String c;
+   private C( ){
+       a=10; b=30.56; c="Anand";
+       System.out.println(a+" "+b+" "+c);
+   }
+
+}
+public class Private_Constructor {
+    public static void main(String[] args){
+       C r= new C (); //function will not run becase its private constructor
+
+    }
+}
+
+
+//Copy constructor
+
+class B {
+    int a; String b;
+    B(){
+        a=10;
+        b="Hello";
+        System.out.println(a+" "+b);
+    }
+    B(B ref){
+        a= ref.a;
+        b= ref.b;
+        System.out.println(a+" "+b);
+    }
+}
+public class Copy_constructor {
+    public static void main(String[] args){
+        B r=new B();
+        B r2= new B(r);
+
+    }
+}
+
+// var using this keyword
+class A{
+    int a;
+    A(int a){
+       this.a=a; // by using this keyword we can get value from nstatnce var to our local variable
+    }
+    void show(){
+         System.out.println(a);
+         
+    }
+}
+class HelloWorld {
+    public static void main(String[] args) {
+        A r= new A(100);
+        System.out.println("Hello, World!");
+        r.show();
+    }
+}
+
+
+//this constructor calls its own constructor
+class A{
+ 
+    A(){
+         System.out.println("Hello, World!");
+    }
+    A(int a){
+        this();
+         System.out.println(a);
+    }
+   
+}
+class HelloWorld {
+    public static void main(String[] args) {
+        A r= new A(100);
+        System.out.println("Hello, World!");
+    }
+}
+
+// by using this keyword we can call paramtellized consrtuctor
+
+class A{
+ 
+    A(){
+         System.out.println("Hello, World!");
+    }
+    A(int a){
+        this();
+         System.out.println(a);
+    }
+   
+}
+class HelloWorld {
+    public static void main(String[] args) {
+        A r= new A(100);
+        System.out.println("Hello, World!");
+    }
+}
+
+//
