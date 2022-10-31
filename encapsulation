@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 class Bank
 {
-   double bal=5000;
-    int pwd;
+   private double bal=5000;
+   private int pwd;
     public void Deposite(double money) {
         System.out.println("Enter Password-");
         Scanner s =new Scanner(System.in);
