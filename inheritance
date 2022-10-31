@@ -1,0 +1,58 @@
+//Single inheritance--
+
+class student{
+    int roll, marks;
+    String name;
+    void input(){
+        System.out.println("Enter roll no & marks:");
+    }
+}
+class anand extends student{
+    void display(){
+        roll=69; name= "Anand Shinde"; marks=100;
+          System.out.print(roll+" "+name+" "+marks);
+    }
+    public static void main(String[] args){
+        anand r= new anand();
+        r.input(); r.display();
+    }
+}
+
+//multiple  inheritance--
+
+class A //Super class
+{
+    int a,b,c;
+    void add(){
+       a=10;b=20; c=a+b;
+        System.out.println("Total: "+c);
+    }
+     void sub(){
+       a=10;b=20; c=a-b;
+        System.out.println("Total: "+c);
+    }
+}
+class B extends A//sub class
+{
+    void mul(){
+         a=10;b=20; c=a*b;
+        System.out.println("Total: "+c);
+    }
+      void div(){
+         a=10;b=20; c=a/b;
+        System.out.println("Total: "+c);
+    }
+}
+class C extends B//sub class
+{
+    void rem(){
+         a=10;b=20; c=a%b;
+        System.out.println("Total: "+c);
+    }
+}
+class Test{
+ public static void main(String[] args){
+        C r= new C();
+        r.add(); r.sub();r.mul();r.div();r.rem();
+    }
+}
